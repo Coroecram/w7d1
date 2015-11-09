@@ -1,14 +1,10 @@
 var Board = React.createClass({
-  handleClick: function(e){
-    debugger;
-    console.log("click");
-  },
+
   render: function(){
     var grid = this.props.board.grid.map(function(row, rowIdx){
                     return (<div key={rowIdx} className="row group">
                         {row.map(function(tile, tileIdx){
-                          return <Tile key={tileIdx} tile={tile} onClick={this.handleClick} update={this.props.update}/>;
-
+                          return <Tile key={tileIdx} tile={tile} update={this.props.update}/>;
                         }.bind(this))}
                     </div>);
                }.bind(this));
@@ -37,8 +33,6 @@ var Tile = React.createClass({
       return " T ";
     }
   },
-
-
   render: function(){
     return <div className="tile">{this.displayState()}</div>;
   }
