@@ -7,10 +7,22 @@
     <script src="https://fb.me/JSXTransformer-0.13.3.js" charset="utf-8"></script>
     <script type="text/jsx" src="./autocomplete.js"></script>
     <script type="text/jsx" src="./weatherclock.js"></script>
+    <script type="text/jsx" src="./tabs.js"></script>
+    <link rel="stylesheet" href="./widgets.css" >
   </head>
   <body>
     <div id="autocomplete"></div>
+    <hr>
     <div id="weatherclock"></div>
+    <hr>
+    <div id="tabs"></div>
+    <hr>
+    <script type="text/jsx">
+      React.render(
+        <Tabs articles={3} />,
+        document.getElementById("tabs")
+      );
+    </script>
 
 
     <script type="text/jsx">
@@ -20,11 +32,11 @@
       );
     </script>
 
-    <!-- <script type="text/jsx">
+    <script type="text/jsx">
       React.render(
         <Autocomplete names={names} />,
         document.getElementById("autocomplete")
       );
-    </script> -->
+    </script>
   </body>
 </html>

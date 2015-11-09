@@ -59,19 +59,19 @@ var WeatherClock = React.createClass({
   },
 
   displayWeather: function(){
-    console.log(this.state.city);
     if(this.state.city === undefined) {
       return "weather loading...";
     }
     var kToF = Math.ceil((this.state.temp *  9/5) - 459.67);
     return ('City: ' + this.state.city + ' Condition: ' + this.state.condition + ' Temperature: ' + kToF + 'F');
-    // return "blah";
   },
 
   render: function(){
     return (
-      <p> Current Time: {this.state.time.toString()} {this.displayWeather()}</p>
-
-    )
+      <div><h1>Weather Clock</h1>
+        <p className="wc"> Current Time: {this.state.time.toString()}</p>
+        <p className="wc"> {this.displayWeather()} </p>
+      </div>
+    );
   }
 });

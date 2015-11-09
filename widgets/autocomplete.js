@@ -22,6 +22,7 @@ var Autocomplete = React.createClass({
     }();
     return (
       <div>
+        <h1>Autosearch</h1>
         <input
           type="text"
           value={this.state.searchString}
