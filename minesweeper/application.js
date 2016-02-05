@@ -40,7 +40,7 @@ var Tile = React.createClass({
 
 
   render: function(){
-    return <div className="tile">{this.displayState()}</div>;
+    return <div onClick={this.props.onClick} className="tile">{this.displayState()}</div>;
   }
 
 });
